@@ -1,0 +1,55 @@
+This directory should contain the following 50 images and their ground
+truths. Ground truths are named *.gtd.pgm or *.gtd.pgm
+
+36.pgm   577 x 419 image of open briefcase on floor of office.
+43.pgm   620 x 462 image of phone on corner of desk in office.
+47.pgm   367 x 417 image of open fire extinguisher case in hallway.
+         (lots of specular highlights)
+48.pgm   539 x 433 image of trash can in front of table and chairs.
+50.pgm   620 x 425 image of microwave oven.
+56.pgm   538 x 416 image of motorcycle parked in front of truck.
+61.pgm   615 x 451 image of tomato on window sill.
+62.pgm   619 x 461 image of pot on counter top.
+101.pgm  449 x 673 image of iron on ironing board.
+103.pgm  575 x 484 image of burner on top of stove.
+104.pgm  610 x 473 image of book of matches on table top.
+105.pgm  640 x 473 image of Nikon still-image camera.
+106.pgm  575 x 435 image of Panasonic video camera.
+108.pgm  652 x 503 image of pair of gloves.
+109.pgm  689 x 489 image of sofa.
+110.pgm  481 x 711 image of vacuum cleaner on carpet.
+111.pgm  593 x 505 image of ash tray.
+125.pgm  646 x 462 image of hammer in tool box.
+126.pgm  531 x 353 image of dart held ready to throw.
+130.pgm  396 x 508 image of razor ready to shave face.
+131.pgm  567 x 481 image of toaster on counter.
+132.pgm  634 x 418 image of spatula in drawer of utensils.
+133.pgm  585 x 511 image of light bulb in socket.
+134.pgm  567 x 503 image of shoe on top of clothes pile.
+137.pgm  351 x 590 image of keys in door lock.
+138.pgm  449 x 456 image of spoon in bowl.
+143.pgm  478 x 488 image of electric fan.
+144.pgm  611 x 488 image of portable stereo.
+146.pgm  576 x 493 image of book pack on desk.
+202.pgm  540 x 512 image of alligator in water.
+203.pgm  512 x 512 image of turtle in water.
+204.pgm  512 x 512 image of bucker on outdoor patio.
+207.pgm  512 x 512 image of car tire (tread showing).
+214.pgm  512 x 438 image of vegetable / cheese grater.
+215.pgm  512 x 468 image of broccoli in container in sink.
+217.pgm  512 x 468 image of banana on kitchen counter.
+218.pgm  552 x 468 image of pillow on bed.
+220.pgm  512 x 512 image of wasp nest on wall of building.
+221.pgm  572 x 512 image of brush in work space.
+223.pgm  512 x 456 image of elephant in zoo area.
+airplane.pgm  659 x 409 image of airplane on airport runway.
+	      (very faint reflection in foreground window)
+block.pgm  618 x 378 image of cinderblock against brick wall.
+coffee.pgm 461 x 665 image of coffee maker.
+cone.pgm   437 x 604 image of traffic cone in parking lot.
+egg.pgm    512 x 512 image of egg in shell on plate.
+fountain.pgm  580 x 502 image of water fountain in hallway.
+parkingmeter.pgm  495 x 558 image of parking meter.
+pitcher.pgm  568 x 419 image of water pitcher.
+police.pgm   701 x 511 image of police car in parking lot.
+stapler.pgm  529 x 510 image of stapler sitting on desk top.
