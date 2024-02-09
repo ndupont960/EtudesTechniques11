@@ -1,0 +1,14 @@
+This directory should contain the following 10 images and their ground
+truths. Ground truths are named *.gtc.pgm
+
+airfield.pgm	593 x 548 aerial image of an airfield
+baseball.pgm	562 x 587 aerial image of a baseball diamond
+buildings.pgm	533 x 540 image of buildings and adjacent parking lot 
+homes.pgm	613 x 628 aerial image of a residential community
+largebuilding.pgm  667 x 645 one large building with a complex roof
+mainbuilding.pgm   651 x 463 one central building and a round-about
+pool_tennis.pgm	618 x 557 image of a recreational compound, including a
+		pool and several tennis courts
+school.pgm	576 x 436 aerial image of a school campus
+series.pgm	569 x 540 image of a row of warehouses
+woods.pgm	477 x 476 aerial image of several buildings in a wooded area
