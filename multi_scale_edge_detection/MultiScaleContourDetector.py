@@ -52,8 +52,7 @@ def multi_scale_contour_detection_without_inhibition(image_normalized, N=4, alph
     images_decimees[0] = image_normalized
 
     for n in range(2, N + 1):
-        images_decimees[n-1] = decim_im(image_normalized, n)  # Assuming you have the function decim_im defined
-
+        images_decimees[n-1] = decim_im(image_normalized, n)  
     # Détection de contours à chaque échelle
     contours_binaires = [None] * N
 
@@ -74,11 +73,11 @@ def multi_scale_contour_detection_without_inhibition(image_normalized, N=4, alph
         resultat_final = cv2.bitwise_and(contours_binaires[n], dto)
         ##resultat_final = np.where(contours_binaires[n] == 0, dto, contours_binaires[n])
         plt.imshow(resultat_final, cmap='gray')
-        plt.title('Résultat de la détection de contours multiscale avec inhibition du contour, étape : ' + str(n+1))
+        plt.title('Résultat de la détection de contours multiscale sans inhibition du contour, étape : ' + str(n+1))
         plt.show()
 
     plt.imshow(resultat_final, cmap='gray')
-    plt.title('Résultat de la détection de contours multiscale avec inhibition du contour')
+    plt.title('Résultat de la détection de contours multiscale sans inhibition du contour')
     plt.show()
 
     return resultat_final

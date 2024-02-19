@@ -15,7 +15,7 @@ def gradient_magnitude(gray_image, sigma=1.0):
     gradient_y = cv2.Sobel(blurred_image, cv2.CV_64F, 0, 1, ksize=3)
 
     # Compute the gradient magnitude
-    gradient_magnitude = sqrt(gradient_x**2 + gradient_y**2)
+    gradient_magnitude = np.sqrt(gradient_x**2 + gradient_y**2)
 
     # Normalize to [0, 1]
     gradient_magnitude /= np.max(gradient_magnitude)
