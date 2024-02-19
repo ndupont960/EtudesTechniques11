@@ -7,7 +7,7 @@ from multi_scale_processing.dto import doubling_and_ticking_operator
 
 from multi_scale_edge_detection.SingleScaleContourDetector import SingleScaleContourDetector_with_inhibition , SingleScaleContourDetector_without_inhibition
  
-def multi_scale_contour_detection_with_inhibition(image_normalized, N=4, alpha=0.005):
+def multi_scale_contour_detection_with_inhibition(image_normalized, N,sigma , alpha=0.005):
     # Tableau de matrices et calcul des images à plusieurs échelles
     images_decimees = [None] * N
     images_decimees[0] = image_normalized
@@ -19,7 +19,7 @@ def multi_scale_contour_detection_with_inhibition(image_normalized, N=4, alpha=0
     contours_binaires = [None] * N
 
     for n in range(N):
-        contours_binaires[n] = SingleScaleContourDetector_with_inhibition(images_decimees[n], 1, alpha)  # Assuming you have the function SingleScaleContourDetector defined
+        contours_binaires[n] = SingleScaleContourDetector_with_inhibition(images_decimees[n], sigma, alpha)  # Assuming you have the function SingleScaleContourDetector defined
 
     # Combine les contours à différentes échelles : de la plus grossière et en descendant progressivement
     resultat_final = contours_binaires[N-1]
@@ -46,7 +46,7 @@ def multi_scale_contour_detection_with_inhibition(image_normalized, N=4, alpha=0
 
 
 
-def multi_scale_contour_detection_without_inhibition(image_normalized, N=4, alpha=0.005):
+def multi_scale_contour_detection_without_inhibition(image_normalized, N ,sigma , alpha):
     # Tableau de matrices et calcul des images à plusieurs échelles
     images_decimees = [None] * N
     images_decimees[0] = image_normalized
@@ -57,7 +57,7 @@ def multi_scale_contour_detection_without_inhibition(image_normalized, N=4, alph
     contours_binaires = [None] * N
 
     for n in range(N):
-        contours_binaires[n] = SingleScaleContourDetector_without_inhibition(images_decimees[n], 1, alpha)  # Assuming you have the function SingleScaleContourDetector defined
+        contours_binaires[n] = SingleScaleContourDetector_without_inhibition(images_decimees[n], sigma, alpha)  # Assuming you have the function SingleScaleContourDetector defined
 
     # Combine les contours à différentes échelles : de la plus grossière et en descendant progressivement
     resultat_final = contours_binaires[N-1]

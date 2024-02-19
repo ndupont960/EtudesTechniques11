@@ -29,7 +29,7 @@ def SingleScaleContourDetector_without_inhibition(image , sigma , alpha):
     # Seuillage hystérésique et suppression des non-maxima
     # Afficher le résultat final
    
-    
+    c_sigma_normal = (c_sigma- c_sigma.min()) / (c_sigma.max() - c_sigma.min())
  
     
     SSCD = seuil_hyst(c_sigma_normal)
