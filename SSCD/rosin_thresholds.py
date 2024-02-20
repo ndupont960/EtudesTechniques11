@@ -41,11 +41,11 @@ def doubleRosinThr(originalImage, precission=0.01, gaussianSigma=1):
     # Histogram Processing
     histogram, _ = np.histogram(originalImage.flatten(), bins=binsNumber, range=[0, 1])
     if gaussianSigma == float('inf'):
-        print(histogram.shape)
+        # print(histogram.shape)
         poss, _ = find_peaks(np.concatenate(([0], histogram)))
         while len(poss) > 1:
             histogram = gaussian_filter(histogram, sigma=1.0)
-            print(histogram.shape)
+            # print(histogram.shape)
             poss, _ = find_peaks(np.concatenate(([0], histogram)))
     elif gaussianSigma > 0:
         histogram = gaussian_filter(histogram, sigma=gaussianSigma)
@@ -83,11 +83,11 @@ def doubleRosinThr(originalImage, precission=0.01, gaussianSigma=1):
 
     ## plot the treshold on the histogramm plot 
     # Assuming histogram is the input histogram and highThr, lowThr are the threshold values
-    plt.plot(histogram, color='gray')
-    plt.axvline(x=highThr, color='r', linestyle='--', label='High Threshold')
-    plt.axvline(x=lowThr, color='g', linestyle='--', label='Low Threshold')
-    plt.legend()
-    plt.show()
+    # plt.plot(histogram, color='gray')
+    # plt.axvline(x=highThr, color='r', linestyle='--', label='High Threshold')
+    # plt.axvline(x=lowThr, color='g', linestyle='--', label='Low Threshold')
+    # plt.legend()
+    # plt.show()
 
     
         # Output formatting

@@ -7,7 +7,7 @@ from multi_scale_processing.dto import doubling_and_ticking_operator
 
 from multi_scale_edge_detection.SingleScaleContourDetector import SingleScaleContourDetector_with_inhibition , SingleScaleContourDetector_without_inhibition
  
-def multi_scale_contour_detection_with_inhibition(image_normalized, N,sigma , alpha=0.005):
+def multi_scale_contour_detection_with_inhibition(image_normalized, N, sigma, alpha=0.005):
     # Tableau de matrices et calcul des images à plusieurs échelles
     images_decimees = [None] * N
     images_decimees[0] = image_normalized
@@ -31,12 +31,44 @@ def multi_scale_contour_detection_with_inhibition(image_normalized, N,sigma , al
         # Convert b1 to the same data type as dto
         contours_binaires[n] = contours_binaires[n].astype(np.uint8)
 
+
+        # # Calculate the closest even pair of numbers
+        height, width = dto.shape[:2]
+        # if height%2 == 1:
+        #     new_height = 2 * int(np.ceil(height / 2))
+        # else :
+        #     new_height = height
+        # if width%2 == 1:
+        #     new_width = 2 * int(np.ceil(width / 2))
+        # else :
+        #     new_width = width
+        # # Resize the image
+        # dto = cv2.resize(dto, (new_width, new_height))
+
+
+
+        # # Calculate the closest even pair of numbers
+        # height, width = contours_binaires[n].shape[:2]
+        # if height%2 == 1:
+        #     new_height = height - 2**(N-2-n)
+        # else :
+        #     new_height = height
+        # if width%2 == 1:
+        #     new_width = width - 2**(N-2-n)
+        # else :
+        #     new_width = width
+        # Resize the image
+        contours_binaires[n] = cv2.resize(contours_binaires[n], (width, height))
+
+
+        
+
         # Combinaison avec la carte de contours à l'échelle suivante
         resultat_final = cv2.bitwise_and(contours_binaires[n], dto)
         ##resultat_final = np.where(contours_binaires[n] == 0, dto, contours_binaires[n])
-        plt.imshow(resultat_final, cmap='gray')
-        plt.title('Résultat de la détection de contours multiscale avec inhibition du contour, étape : ' + str(n+1))
-        plt.show()
+        # plt.imshow(resultat_final, cmap='gray')
+        # plt.title('Résultat de la détection de contours multiscale avec inhibition du contour, étape : ' + str(n+1))
+        # plt.show()
 
     plt.imshow(resultat_final, cmap='gray')
     plt.title('Résultat de la détection de contours multiscale avec inhibition du contour')
@@ -69,12 +101,17 @@ def multi_scale_contour_detection_without_inhibition(image_normalized, N ,sigma 
         # Convert b1 to the same data type as dto
         contours_binaires[n] = contours_binaires[n].astype(np.uint8)
 
+        height, width = dto.shape[:2]
+
+        # Resize the image
+        contours_binaires[n] = cv2.resize(contours_binaires[n], (width, height))
+
         # Combinaison avec la carte de contours à l'échelle suivante
         resultat_final = cv2.bitwise_and(contours_binaires[n], dto)
         ##resultat_final = np.where(contours_binaires[n] == 0, dto, contours_binaires[n])
-        plt.imshow(resultat_final, cmap='gray')
-        plt.title('Résultat de la détection de contours multiscale sans inhibition du contour, étape : ' + str(n+1))
-        plt.show()
+        # plt.imshow(resultat_final, cmap='gray')
+        # plt.title('Résultat de la détection de contours multiscale sans inhibition du contour, étape : ' + str(n+1))
+        # plt.show()
 
     plt.imshow(resultat_final, cmap='gray')
     plt.title('Résultat de la détection de contours multiscale sans inhibition du contour')

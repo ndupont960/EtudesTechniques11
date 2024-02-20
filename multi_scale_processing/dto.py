@@ -17,7 +17,7 @@ def doubling_and_ticking_operator(binary_map):
     doubled_map = np.zeros((binary_map.shape[0] * 2, binary_map.shape[1] * 2), dtype=np.uint8)
     doubled_map[::2, ::2] = binary_map
 
-    print(doubled_map)
+    # print(doubled_map)
 
     # Step 2: Ticking - substitute each nonzero pixel in the doubled map with a disk of radius 3 pixels
     structuring_element = disk(3)  # Create a disk structuring element with radius 3
