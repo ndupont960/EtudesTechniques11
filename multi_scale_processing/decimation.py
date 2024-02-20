@@ -11,5 +11,5 @@ def decim_im(image, N):
     Returns:
     - im_decimee: the resized image as a float32 array
     """
-    im_decimee = cv2.resize(image, None, fx=1/2**(N-1), fy=1/2**(N-1), interpolation=cv2.INTER_CUBIC).astype(np.float32)
+    im_decimee = cv2.resize(image, None, fx=1/2**(N-1), fy=1/2**(N-1), interpolation=cv2.INTER_LINEAR).astype(np.float32)
     return im_decimee
