@@ -70,9 +70,9 @@ def multi_scale_contour_detection_with_inhibition(image_normalized, N, sigma, al
         # plt.title('Résultat de la détection de contours multiscale avec inhibition du contour, étape : ' + str(n+1))
         # plt.show()
 
-    plt.imshow(resultat_final, cmap='gray')
-    plt.title('Résultat de la détection de contours multiscale avec inhibition du contour')
-    plt.show()
+    # plt.imshow(resultat_final, cmap='gray')
+    # plt.title('Résultat de la détection de contours multiscale avec inhibition du contour')
+    # plt.show()
 
     return resultat_final
 
