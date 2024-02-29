@@ -21,7 +21,7 @@ def SingleScaleContourDetector_with_inhibition(image , sigma , alpha):
     return SSCD
 
 
-def SingleScaleContourDetector_without_inhibition(image , sigma , alpha):
+def SingleScaleContourDetector_without_inhibition(image , sigma ):
     # Calcul du Gradient avec un Noyau Gaussien
     c_sigma = gradient_magnitude(image, sigma)
     
